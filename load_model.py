@@ -9,6 +9,10 @@ app = Flask(__name__)
 model = joblib.load('diabetic_79.pkl')
 
 # names = ['preg', 'plas', 'pres', 'skin', 'test', 'mass', 'pedi', 'age', 'class']
+@app.route('/')
+def main():
+    return render_template('landing.html')
+
 @app.route('/diabetic')
 def diabetic():
     return render_template('Diabetic.html')
