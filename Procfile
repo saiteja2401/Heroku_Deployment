@@ -1,0 +1,1 @@
+web: gunicorn load_model:app
